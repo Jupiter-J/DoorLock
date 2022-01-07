@@ -3,6 +3,7 @@ package com.example.doorlock.controller;
 
 import com.example.doorlock.model.Board;
 import com.example.doorlock.repository.BoardRepository;
+import com.example.doorlock.validator.BoardValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +19,9 @@ public class BoardController {
 
     @Autowired
     private BoardRepository boardRepository;
+
+    @Autowired                  //@컴포넌트사용 해야함
+    private BoardValidator boardValidator;
 
     @GetMapping("/list")  //게시판 호출시 데이터값 넣어주기위해 모델 입력
     public String list(Model model){
@@ -40,8 +44,13 @@ public class BoardController {
     }
 
     @PostMapping("/form")
-    public String greetingSubmit(@ModelAttribute Board board){
-        boardRepository.save(board); //실행이 안되고 있음
+    public String greetingSubmit(@Valid Board board, BindingResult bindingResult){
+        boardValidator.validate(board, bindingResult);
+        if(bindingResult.hasErrors()){
+            return "board/form";
+        }
+
+        boardRepository.save(board);
         System.out.println("test3");
         System.out.println(boardRepository.findByTitleOrContent(board.getTitle(), board.getContent()));
         return "redirect:/board/list";
@@ -49,8 +58,3 @@ public class BoardController {
 
 }
 
-
-//글자수 예외처리
-//        if(bindingResult.hasErrors()){
-//            return "board/form";
-//        }
