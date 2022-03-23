@@ -1,6 +1,8 @@
 # DoorLock 게시판 제작
-## 제작 기간
+## 제작 기간 & 배경
 * 2021-10-15 ~ 2021-12-29
+* 창업 동아리 활동으로 웹 게시판을 제작하는 역할을 맞게 되었다
+
 ## Tech Stack 
 * Spring Boot(MVC), Gradle, Thymeleaf, bootstrap
 * Mysql, AWS, RDS, Swagger
