@@ -5,7 +5,7 @@
 
 ## Tech Stack 
 * Spring Boot(MVC), Gradle, Thymeleaf, bootstrap
-* Mysql, AWS, RDS, Swagger
+* AWS, RDS(MySql), Swagger
 
 ## 기능
 * Create, Read, Update, Delete 
