@@ -12,8 +12,8 @@
 * CRUD API 
 
 
-<img width= "80%" src="https://user-images.githubusercontent.com/73453283/153533089-dad28764-2338-44ea-85fc-ad124e943e27.PNG">
-<img width= "80%" src="https://user-images.githubusercontent.com/73453283/153533087-892ebcb5-316d-42f2-9c6a-a1af66998695.PNG" >
+<img width= "90%" src="https://user-images.githubusercontent.com/73453283/153533089-dad28764-2338-44ea-85fc-ad124e943e27.PNG">
+<img width= "90%" src="https://user-images.githubusercontent.com/73453283/153533087-892ebcb5-316d-42f2-9c6a-a1af66998695.PNG" >
 
 
 
